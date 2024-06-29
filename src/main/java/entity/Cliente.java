@@ -1,12 +1,12 @@
 package entity;
 
 public class Cliente {
-    String nome;
-    String origem;
-    String destino;
-    int qtd_dias;
-    int estrelas;
-    Double dinheiro;
+    private String nome;
+    private String origem;
+    private String destino;
+    private int qtd_dias;
+    private int estrelas;
+    private Double dinheiro;
 
     public Cliente() {
         super();

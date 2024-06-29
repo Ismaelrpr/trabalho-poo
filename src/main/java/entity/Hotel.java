@@ -1,11 +1,11 @@
 package entity;
 
 public class Hotel {
-    String local;
-    String nome;
-    int vagas;
-    Double preço;
-    int estrelas;
+    private String local;
+    private String nome;
+    private int vagas;
+    private Double preço;
+    private int estrelas;
 
     public Hotel(String local, String nome, int vagas, Double preço, int estrelas) {
         this.local = local;

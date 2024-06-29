@@ -2,6 +2,8 @@ package repository;
 
 import com.opencsv.CSVReader;
 import entity.Cliente;
+import entity.Hotel;
+import entity.Voos;
 
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -35,13 +37,13 @@ public class CSVLoader {
         return hoteis;
     }
 
-    public static List<Voo> loadVoos(String filePath) throws Exception {
-        List<Voo> voos = new ArrayList<>();
+    public static List<Voos> loadVoos(String filePath) throws Exception {
+        List<Voos> voos = new ArrayList<>();
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             String[] line;
             while ((line = reader.readNext()) != null) {
                 String[] data = line[0].split(";");
-                Voo voo = new Voo(data[0], data[1], data[2], data[3], Integer.parseInt(data[4].split(" ")[0]), Double.parseDouble(data[5].split(" ")[1]));
+                Voos voo = new Voos(data[0], data[1], data[2], data[3], Integer.parseInt(data[4].split(" ")[0]), Double.parseDouble(data[5].split(" ")[1]));
                 voos.add(voo);
             }
         }

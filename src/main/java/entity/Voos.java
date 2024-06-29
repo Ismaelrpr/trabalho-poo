@@ -1,13 +1,13 @@
 package entity;
 
 public class Voos {
-    String origem;
-    String Destino;
-    int data;
-    int horario;
+    private String origem;
+    private String Destino;
+    private int data;
+    private int horario;
 
-    int qtd_assentos;
-    Double preço;
+    private int qtd_assentos;
+    private Double preço;
 
     public Voos() {
         super();
