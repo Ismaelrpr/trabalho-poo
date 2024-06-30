@@ -26,6 +26,9 @@ public class Main {
             System.out.println(cliente.getNome() + " " + cliente.getOrigem() + " " + cliente.getDestino() + " " + cliente.getQtd_dias() + " " + cliente.getEstrelas() + " " + cliente.getDinheiro());
         }
 
+        // processamento paralelo e serial
+
+
     } catch (Exception e) {
         e.printStackTrace();
     }

@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ReservaService {
-    public static Hotel buscarHotelMaisBarato(List<Hotel> hoteis, String localizacao, int estrelasMinimas) {
+
+    // Busca o hotel mais barato que atenda ao número mínimo de estrelas e tenha vagas disponíveis
+    public static Hotel buscarHotelMaisBarato(List<Hotel> hoteis, String localizacao, Integer estrelasMinimas) {
         return hoteis.stream()
                 .filter(h -> h.getLocal().equals(localizacao) && h.getEstrelas() >= estrelasMinimas && h.getVagas() > 0)
                 .sorted(Comparator.comparingDouble(Hotel::getPreco))
@@ -17,6 +19,7 @@ public class ReservaService {
                 .orElse(null);
     }
 
+    // Busca os dois voos mais baratos que atendam à origem e destino informados
     public static List<Voos> buscarVoosMaisBaratos(List<Voos> voos, String origem, String destino) {
         List<Voos> voosEncontrados = new ArrayList<>();
         voos.stream()
@@ -27,6 +30,7 @@ public class ReservaService {
         return voosEncontrados;
     }
 
+    // Busca voos com conexões que atendam à origem e destino informados
     public static List<Voos> buscarVoosComConexoes(List<Voos> voos, String origem, String destino) {
         List<Voos> voosComConexao = new ArrayList<>();
         List<Voos> voosOrigem = voos.stream()
