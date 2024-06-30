@@ -3,11 +3,15 @@ package entity;
 public class Hotel {
     private String local;
     private String nome;
-    private int vagas;
+    private Integer vagas;
     private Double preço;
-    private int estrelas;
+    private Integer estrelas;
 
-    public Hotel(String local, String nome, int vagas, Double preço, int estrelas) {
+    public Hotel() {
+        super();
+    }
+
+    public Hotel(String local, String nome, Integer vagas, Double preço, Integer estrelas) {
         this.local = local;
         this.nome = nome;
         this.vagas = vagas;

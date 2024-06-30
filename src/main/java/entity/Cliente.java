@@ -4,14 +4,15 @@ public class Cliente {
     private String nome;
     private String origem;
     private String destino;
-    private int qtd_dias;
-    private int estrelas;
+    private Integer qtd_dias;
+    private Integer estrelas;
     private Double dinheiro;
 
     public Cliente() {
         super();
     }
-    public Cliente(String nome, String origem, String destino, int qtd_dias, int estrelas, Double dinheiro) {
+
+    public Cliente(String nome, String origem, String destino, Integer qtd_dias, Integer estrelas, Double dinheiro) {
         this.nome = nome;
         this.origem = origem;
         this.destino = destino;

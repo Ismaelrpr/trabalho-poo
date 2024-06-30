@@ -3,17 +3,16 @@ package entity;
 public class Voos {
     private String origem;
     private String Destino;
-    private int data;
-    private int horario;
-
-    private int qtd_assentos;
+    private String data;
+    private String horario;
+    private Integer qtd_assentos;
     private Double preço;
 
     public Voos() {
         super();
     }
 
-    public Voos(String origem, String destino, int data, int horario, int qtd_assentos, Double preço) {
+    public Voos(String origem, String destino, String data, String horario, Integer qtd_assentos, Double preço) {
         this.origem = origem;
         Destino = destino;
         this.data = data;
@@ -30,11 +29,11 @@ public class Voos {
         return Destino;
     }
 
-    public int getData() {
+    public String getData() {
         return data;
     }
 
-    public int getHorario() {
+    public String getHorario() {
         return horario;
     }
 

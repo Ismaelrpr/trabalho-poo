@@ -6,6 +6,7 @@ import entity.Hotel;
 import entity.Voos;
 
 import java.io.FileReader;
+import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class CSVLoader {
             String[] line;
             while ((line = reader.readNext()) != null) {
                 String[] data = line[0].split(";");
-                Cliente cliente = new Cliente(data[0], data[1], data[2], data[3], Integer.parseInt(data[4].split(" ")[0]), Double.parseDouble(data[5].split(" ")[1]));
+                Cliente cliente = new Cliente(data[0], data[1], data[2], Integer.parseInt(data[3].split(" ")[0]), Integer.parseInt(data[4].split(" ")[0]), Double.parseDouble(data[5].split(" ")[1]));
                 clientes.add(cliente);
             }
         }
