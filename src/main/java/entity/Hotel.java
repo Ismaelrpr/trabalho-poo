@@ -4,18 +4,18 @@ public class Hotel {
     private String local;
     private String nome;
     private Integer vagas;
-    private Double preço;
+    private Double preco;
     private Integer estrelas;
 
     public Hotel() {
         super();
     }
 
-    public Hotel(String local, String nome, Integer vagas, Double preço, Integer estrelas) {
+    public Hotel(String local, String nome, Integer vagas, Double preco, Integer estrelas) {
         this.local = local;
         this.nome = nome;
         this.vagas = vagas;
-        this.preço = preço;
+        this.preco = preco;
         this.estrelas = estrelas;
     }
 
@@ -35,8 +35,8 @@ public class Hotel {
         this.vagas = vagas;
     }
 
-    public Double getPreço() {
-        return preço;
+    public Double getPreco() {
+        return preco;
     }
 
     public int getEstrelas() {

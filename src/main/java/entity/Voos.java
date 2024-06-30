@@ -6,19 +6,19 @@ public class Voos {
     private String data;
     private String horario;
     private Integer qtd_assentos;
-    private Double preço;
+    private Double preco;
 
     public Voos() {
         super();
     }
 
-    public Voos(String origem, String destino, String data, String horario, Integer qtd_assentos, Double preço) {
+    public Voos(String origem, String destino, String data, String horario, Integer qtd_assentos, Double preco) {
         this.origem = origem;
         Destino = destino;
         this.data = data;
         this.horario = horario;
         this.qtd_assentos = qtd_assentos;
-        this.preço = preço;
+        this.preco = preco;
     }
 
     public String getOrigem() {
@@ -45,8 +45,8 @@ public class Voos {
         this.qtd_assentos = qtd_assentos;
     }
 
-    public Double getPreço() {
-        return preço;
+    public Double getPreco() {
+        return preco;
     }
 
 }
