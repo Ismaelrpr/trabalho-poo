@@ -31,7 +31,7 @@ public class Main {
 
         // processamento serial
         System.out.println("Processamento serial:");
-        SerialProcess.processarUsuarios(clientes, hoteis, voos);
+        SerialProcess.processarUsuarios(clientes, hoteis, voos, caminhoHoteis, caminhoVoos);
 
 
     } catch (Exception e) {
