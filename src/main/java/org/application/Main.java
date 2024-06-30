@@ -4,6 +4,7 @@ import entity.Cliente;
 import entity.Hotel;
 import entity.Voos;
 import repository.CSVLoader;
+import services.SerialProcess;
 
 import java.util.List;
 
@@ -26,7 +27,11 @@ public class Main {
             System.out.println(cliente.getNome() + " " + cliente.getOrigem() + " " + cliente.getDestino() + " " + cliente.getQtd_dias() + " " + cliente.getEstrelas() + " " + cliente.getDinheiro());
         }
 
-        // processamento paralelo e serial
+        System.out.println("");
+
+        // processamento serial
+        System.out.println("Processamento serial:");
+        SerialProcess.processarUsuarios(clientes, hoteis, voos);
 
 
     } catch (Exception e) {
