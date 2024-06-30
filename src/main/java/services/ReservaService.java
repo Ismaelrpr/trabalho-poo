@@ -30,7 +30,7 @@ public class ReservaService {
         return voosEncontrados;
     }
 
-    // Busca voos com conexões que atendam à origem e destino informados
+    // Busca voos com conexões que atendam à origem e destino informados.
     public static List<Voos> buscarVoosComConexoes(List<Voos> voos, String origem, String destino) {
         List<Voos> voosComConexao = new ArrayList<>();
         List<Voos> voosOrigem = voos.stream()
