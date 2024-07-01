@@ -15,9 +15,11 @@ public class Main {
 //        String caminhoClientes = "/home/makima/Ismael/trabalho-poo/src/main/resources/data/formato-clientes.csv";
 //        String caminhoHoteis = "/home/makima/Ismael/trabalho-poo/src/main/resources/data/formato-hoteis.csv";
 //        String caminhoVoos = "/home/makima/Ismael/trabalho-poo/src/main/resources/data/formato-voos.csv";
+
         String caminhoClientes = "/home/makima/Ismael/trabalho-poo/geradores/listaclientes.csv";
         String caminhoHoteis = "/home/makima/Ismael/trabalho-poo/geradores/listahoteis.csv";
         String caminhoVoos = "/home/makima/Ismael/trabalho-poo/geradores/listavoos.csv";
+        String caminhoOutput = "/home/makima/Ismael/trabalho-poo/src/main/output.csv";
 
         //Carregar dados dos arquivos CSV
         List<Cliente> clientes = CSVLoader.loadClientes(caminhoClientes);
@@ -37,7 +39,8 @@ public class Main {
         // processamento serial
         System.out.println("Processamento serial:");
 //        SerialProcess.processarUsuarios(clientes, hoteis, voos, caminhoHoteis, caminhoVoos);
-        SerialProcess.processarUsuarios(clientes, hoteis, voos, caminhoHoteis, caminhoVoos, caminhoClientes);
+
+        SerialProcess.processarUsuarios(clientes, hoteis, voos, caminhoHoteis, caminhoVoos, caminhoClientes, caminhoOutput);
 
         System.out.println(" ");
 
