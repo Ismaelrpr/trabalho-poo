@@ -1,5 +1,6 @@
 package repository;
 
+import entity.Cliente;
 import entity.Hotel;
 import entity.Voos;
 
@@ -30,6 +31,20 @@ public class CSVWriting {
                         voo.getHorario() + ";" +
                         voo.getQtd_assentos() + " assentos;R$ " +
                         voo.getPreco() + "\n";
+                writer.write(line);
+            }
+        }
+    }
+
+    public static void atualizarClientes(String filePath, List<Cliente> clientes) throws IOException {
+        try (FileWriter writer = new FileWriter(filePath)) {
+            for (Cliente cliente : clientes) {
+                String line = cliente.getNome() + ";" +
+                        cliente.getOrigem() + ";" +
+                        cliente.getDestino() + ";" +
+                        cliente.getQtd_dias() + " dias;" +
+                        cliente.getEstrelas() + " estrelas;R$ " +
+                        cliente.getDinheiro() + "\n";
                 writer.write(line);
             }
         }
