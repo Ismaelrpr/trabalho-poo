@@ -4,6 +4,7 @@ import entity.Cliente;
 import entity.Hotel;
 import entity.Voos;
 import repository.CSVLoader;
+import services.ParallelProcess;
 import services.SerialProcess;
 
 import java.util.List;
@@ -56,21 +57,21 @@ public class Main {
         System.out.println("processamento serial em minutos: " + min1);
 
         //////////////////////////////////////////////////////////////////////////
-//
-//        long inicio2 = System.currentTimeMillis();
-//
-//        // processamento paralelo
-//
-//        long fim2 = System.currentTimeMillis();
-//
-//        long tempo2 = fim2 - inicio2;
-//
-//        double seg2 = tempo2 / 1000.0;
-//        double min2 = seg2 / 60.0;
-//
-//        System.out.println("Tempo de execução em milissegundos: " + tempo2);
-//        System.out.println("Tempo de execução em segundos: " + seg2);
-//        System.out.println("Tempo de execução em minutos: " + min2);
+
+        long inicio2 = System.currentTimeMillis();
+
+        ParallelProcess.processarUsuarios(clientes, hoteis, caminhoHoteis, caminhoVoos, caminhoClientes, caminhoOutput);
+
+        long fim2 = System.currentTimeMillis();
+
+        long tempo2 = fim2 - inicio2;
+
+        double seg2 = tempo2 / 1000.0;
+        double min2 = seg2 / 60.0;
+
+        System.out.println("Tempo de execução em milissegundos: " + tempo2);
+        System.out.println("Tempo de execução em segundos: " + seg2);
+        System.out.println("Tempo de execução em minutos: " + min2);
 
 
     } catch (Exception e) {

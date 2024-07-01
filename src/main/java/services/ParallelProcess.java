@@ -5,13 +5,18 @@ import entity.Hotel;
 import entity.Voos;
 import repository.CSVWriting;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ParallelProcess {
 
-    public static void processarUsuarios(List<Cliente> clientes, List<Hotel> hoteis, List<Voos> voos, String caminhoHoteis, String caminhoVoos) {
+    public static void processarUsuarios(List<Cliente> clientes, List<Hotel> hoteis, List<Voos> voos, String caminhoHoteis, String caminhoVoos, String caminhoCliente, String caminhoOutput) throws IOException{
 
         List<Thread> threads = new ArrayList<>();
 
@@ -39,6 +44,27 @@ public class ParallelProcess {
             e.printStackTrace();
         }
     }
+//
+//    public static CompletableFuture<Hotel> buscarHotelMaisBaratoAsync(List<Hotel> hoteis, String localizacao, Integer estrelasMinimas) {
+//        return CompletableFuture.supplyAsync(() -> hoteis.stream()
+//                .filter(h -> h.getLocal().equals(localizacao) && h.getEstrelas() >= estrelasMinimas && h.getVagas() > 0)
+//                .sorted(Comparator.comparingDouble(Hotel::getPreco))
+//                .findFirst()
+//                .orElse(null));
+//    }
+//
+//    public static Hotel HotelMaisBarato(List<Hotel> hoteis, String localizacao, Integer estrelasMinimas) {
+//        ExecutorService executor = Executors.newSingleThreadExecutor();
+//        CompletableFuture<Hotel> futureHotel = buscarHotelMaisBaratoAsync(hoteis, localizacao, estrelasMinimas);
+//        try {
+//            return futureHotel.get(); // Espera o resultado da busca
+//        } catch (InterruptedException | ExecutionException e) {
+//            e.printStackTrace();
+//            return null;
+//        } finally {
+//            executor.shutdown();
+//        }
+//    }
 
     static class Tarefa implements Runnable {
         private final Cliente cliente;
@@ -53,7 +79,7 @@ public class ParallelProcess {
 
         @Override
         public void run() {
-            Hotel hotel = ReservaService.buscarHotelMaisBarato(hoteis, cliente.getDestino(), cliente.getEstrelas());
+            Hotel hotel = ParallelProcess.HotelMaisBarato(hoteis, cliente.getDestino(), cliente.getEstrelas());
             List<Voos> voosEncontrados = ReservaService.buscarVoosMaisBaratos(voos, cliente.getOrigem(), cliente.getDestino());
 
 
