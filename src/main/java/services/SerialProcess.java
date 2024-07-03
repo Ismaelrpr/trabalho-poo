@@ -54,9 +54,9 @@ public class SerialProcess {
                 if(saldoAtualizadoClientes.containsKey(cliente.getNome())){
                     Double saldoAtualizado = saldoAtualizadoClientes.get(cliente.getNome());
                     cliente.setDinheiro(saldoAtualizado);
-                }else if (saldoAtualizadoClientes.containsValue(cliente.getDinheiro() < 0)){
+                }else if(custoTotal > cliente.getDinheiro()){
                     saldoAtualizadoClientes.put(cliente.getNome(), cliente.getDinheiro());
-                }else {
+                }else{
                     saldoAtualizadoClientes.put(cliente.getNome(), cliente.getDinheiro() - custoTotal);
                 }
 
@@ -66,6 +66,7 @@ public class SerialProcess {
                     bw.write(mensagem);
                     bw.newLine();
 
+                    // Valores totais de atendimentos, pedidos e gastos
                     pedidosAtendidos++;
                     valorTotalGasto += custoTotal;
                     valorGastoHoteis += hotel.getPreco();
