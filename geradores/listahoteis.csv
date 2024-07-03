@@ -8,7 +8,7 @@ FOR;Hotel 2;0 vagas;R$ 721.0;3 estrelas
 FOR;Hotel 3;0 vagas;R$ 964.0;5 estrelas
 FOR;Hotel 4;0 vagas;R$ 987.0;5 estrelas
 FOR;Hotel 5;0 vagas;R$ 548.0;2 estrelas
-REC;Hotel 1;5 vagas;R$ 766.0;2 estrelas
+REC;Hotel 1;4 vagas;R$ 766.0;2 estrelas
 REC;Hotel 2;0 vagas;R$ 498.0;5 estrelas
 REC;Hotel 3;0 vagas;R$ 661.0;1 estrelas
 REC;Hotel 4;0 vagas;R$ 641.0;3 estrelas
@@ -34,15 +34,15 @@ MAO;Hotel 3;0 vagas;R$ 337.0;5 estrelas
 MAO;Hotel 4;0 vagas;R$ 871.0;4 estrelas
 MAO;Hotel 5;0 vagas;R$ 517.0;1 estrelas
 VCP;Hotel 1;0 vagas;R$ 258.0;4 estrelas
-VCP;Hotel 2;6 vagas;R$ 702.0;1 estrelas
+VCP;Hotel 2;4 vagas;R$ 702.0;1 estrelas
 VCP;Hotel 3;0 vagas;R$ 348.0;5 estrelas
 VCP;Hotel 4;0 vagas;R$ 385.0;5 estrelas
 VCP;Hotel 5;0 vagas;R$ 252.0;3 estrelas
-POA;Hotel 1;10 vagas;R$ 582.0;1 estrelas
+POA;Hotel 1;9 vagas;R$ 582.0;1 estrelas
 POA;Hotel 2;0 vagas;R$ 251.0;4 estrelas
 POA;Hotel 3;0 vagas;R$ 740.0;3 estrelas
 POA;Hotel 4;0 vagas;R$ 204.0;1 estrelas
-POA;Hotel 5;3 vagas;R$ 809.0;2 estrelas
+POA;Hotel 5;1 vagas;R$ 809.0;2 estrelas
 FLN;Hotel 1;0 vagas;R$ 316.0;3 estrelas
 FLN;Hotel 2;0 vagas;R$ 482.0;3 estrelas
 FLN;Hotel 3;0 vagas;R$ 284.0;5 estrelas
@@ -70,7 +70,7 @@ GRU;Hotel 4;0 vagas;R$ 213.0;5 estrelas
 GRU;Hotel 5;0 vagas;R$ 879.0;2 estrelas
 CWB;Hotel 1;0 vagas;R$ 403.0;2 estrelas
 CWB;Hotel 2;0 vagas;R$ 325.0;3 estrelas
-CWB;Hotel 3;10 vagas;R$ 999.0;1 estrelas
+CWB;Hotel 3;9 vagas;R$ 999.0;1 estrelas
 CWB;Hotel 4;0 vagas;R$ 923.0;3 estrelas
 CWB;Hotel 5;0 vagas;R$ 314.0;3 estrelas
 GIG;Hotel 1;0 vagas;R$ 158.0;3 estrelas
